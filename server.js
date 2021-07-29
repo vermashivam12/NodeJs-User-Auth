@@ -1,13 +1,15 @@
 require("colors");
 const express = require("express");
 const fileUpload = require("express-fileupload");
-require("dotenv").config({ path: "./config/.env" });
 
+require("dotenv").config({ path: "./config/.env" });
 const {
   dev: { node },
 } = require("./config/configuration");
+const dbConnect = require("./config/database");
 
 const app = express();
+dbConnect();
 
 const server = app.listen(node.port, () => {
   console.log(
