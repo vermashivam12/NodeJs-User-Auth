@@ -1,15 +1,20 @@
 require("colors");
+require("jsonwebtoken");
 const express = require("express");
-const fileUpload = require("express-fileupload");
 
 require("dotenv").config({ path: "./config/.env" });
 const {
   dev: { node },
 } = require("./config/configuration");
 const dbConnect = require("./config/database");
+const routerApi = require("./routes/api");
 
 const app = express();
 dbConnect();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use("/api/v1", routerApi);
 
 const server = app.listen(node.port, () => {
   console.log(
