@@ -1,0 +1,23 @@
+{
+  "name": "spakengineering",
+  "version": "1.0.0",
+  "description": "backend assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vermashivam12/SpakEngineering.git"
+  },
+  "keywords": [
+    "nodejs",
+    "backend"
+  ],
+  "author": "Shivam V",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vermashivam12/SpakEngineering/issues"
+  },
+  "homepage": "https://github.com/vermashivam12/SpakEngineering#readme"
+}
