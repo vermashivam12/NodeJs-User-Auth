@@ -4,7 +4,8 @@
   "description": "backend assignment",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,18 @@
   "bugs": {
     "url": "https://github.com/vermashivam12/SpakEngineering/issues"
   },
-  "homepage": "https://github.com/vermashivam12/SpakEngineering#readme"
+  "homepage": "https://github.com/vermashivam12/SpakEngineering#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-validator": "^6.12.1",
+    "mongodb": "^3.6.10",
+    "mongoose": "^5.13.4",
+    "slugify": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
