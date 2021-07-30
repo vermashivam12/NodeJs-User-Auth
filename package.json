@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/vermashivam12/SpakEngineering#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
@@ -30,6 +31,8 @@
     "mongodb": "^3.6.10",
     "mongoose": "^5.13.4",
     "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
     "slugify": "^1.6.0"
   },
   "devDependencies": {
