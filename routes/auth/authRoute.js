@@ -9,5 +9,6 @@ const route = express.Router();
 
 route.route("/sign_in").post(validateSignIn, signIn);
 route.route("/sign_up").post(validateSignUp, signUp);
+// route.route("/sign_out").post(validateSignUp, signUp);
 
 module.exports = route;

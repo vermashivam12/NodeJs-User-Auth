@@ -28,7 +28,6 @@ app.all("/*", (req, res, next) => {
 });
 
 app.use("/auth", require("./auth/authRoute"));
-
-// app.use("/users", require("./tagRoute"));
+app.use("/users", require("./users/userRoute"));
 
 module.exports = app;

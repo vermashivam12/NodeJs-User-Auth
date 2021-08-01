@@ -29,26 +29,22 @@ exports.updateOne = async (filter, payload) =>
 /**
  *  @desc    - Aggregate all Records.
  */
-exports.aggregate = async (filter, sortFilter, limit, page) =>
+exports.aggregate = async (filter, limit, page) =>
   await User.aggregate()
     .match(filter)
     .collation({ locale: "en" })
     .project({
-      firstName: 1,
-      lastName: 1,
-      email: 1,
-      roles: 1,
-      status: 1,
-      contact: 1,
+      name: 1,
       slug: 1,
+      email: 1,
+      gender: 1,
+      contact: 1,
+      address: 1,
+      country: 1,
       createdAt: 1,
     })
     .facet({
-      data: [
-        { $sort: sortFilter },
-        { $skip: (page - 1) * limit },
-        { $limit: limit },
-      ],
+      data: [{ $skip: (page - 1) * limit }, { $limit: limit }],
       count: [{ $group: { _id: null, count: { $sum: 1 } } }],
     })
     .exec();
